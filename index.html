@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SaniXperts — Global Market Analysis · Anubhav Flow Intelligence</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Cinzel:wght@400;600;700;900&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#04080f;--n2:#07101e;--n3:#0b1828;--g1:#f8eebc;--g2:#e8d080;--g3:#c9a84c;--g4:#7a5818;--g5:#4a3010;--cr:#ede4cf;--cr2:#bdb09a;--bdr:rgba(201,168,76,0.1);--red:#c0392b;--grn:#27ae60;}
+html{scroll-behavior:smooth;background:var(--bg);}
+body{color:var(--cr);font-family:"Montserrat",sans-serif;overflow-x:hidden;}
+#prog{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--g5),var(--g3),var(--g1));z-index:999;width:0;}
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;height:52px;background:rgba(4,8,15,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;padding:0 40px;}
+.nav-logo{display:flex;align-items:center;gap:10px;}
+.nav-wm{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:15px;color:var(--cr);letter-spacing:2px;}
+.nav-wm b{color:var(--g2);font-weight:400;}
+.nav-r{display:flex;gap:8px;}
+.tag{font-family:"Montserrat",sans-serif;font-size:7px;letter-spacing:3px;padding:4px 10px;border:1px solid;text-transform:uppercase;}
+.tg{color:var(--g3);border-color:rgba(201,168,76,.22);background:rgba(201,168,76,.05);}
+.tr{color:var(--grn);border-color:rgba(39,174,96,.22);background:rgba(39,174,96,.05);display:flex;align-items:center;gap:5px;}
+.ld{width:5px;height:5px;background:var(--grn);border-radius:50%;animation:ld 1.5s infinite;}
+@keyframes ld{0%,100%{box-shadow:0 0 0 0 rgba(39,174,96,.5);}50%{box-shadow:0 0 0 5px rgba(39,174,96,0);}}
+.f{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease;}
+.f.on{opacity:1;transform:none;}
+@keyframes fu{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+
+/* COVER */
+.cover{min-height:100vh;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:72px 32px 56px;overflow:hidden;text-align:center;}
+#cc{position:absolute;inset:0;width:100%;height:100%;}
+.cover-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.02) 1px,transparent 1px);background-size:54px 54px;}
+.con{position:relative;z-index:2;max-width:860px;}
+.c-eye{font-family:"Montserrat",sans-serif;font-size:8px;letter-spacing:7px;color:rgba(201,168,76,.3);text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;justify-content:center;gap:16px;}
+.cl{width:40px;height:1px;background:rgba(201,168,76,.18);}
+.c-conf{font-family:"Montserrat",sans-serif;font-size:7px;letter-spacing:5px;color:rgba(201,168,76,.25);text-transform:uppercase;margin-bottom:14px;}
+.c-subj{font-family:"Cinzel",serif;font-size:clamp(10px,1.4vw,13px);font-weight:600;letter-spacing:6px;color:rgba(201,168,76,.55);text-transform:uppercase;margin-bottom:8px;}
+.c-subj span{color:var(--g2);}
+.c-hero{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:300;font-size:clamp(38px,6.5vw,72px);color:var(--cr);line-height:1.18;letter-spacing:2px;margin-bottom:10px;}
+.c-hero em{color:var(--g2);}
+.c-rule{width:200px;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.4),transparent);margin:18px auto;}
+.c-tag{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(13px,2vw,18px);color:rgba(201,168,76,.42);letter-spacing:1px;margin-bottom:36px;}
+.c-philosophy{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(4,8,15,.7);backdrop-filter:blur(10px);border:1px solid rgba(201,168,76,.1);margin-bottom:28px;}
+.cp{padding:18px 16px;text-align:center;border-right:1px solid rgba(201,168,76,.07);}
+.cp:last-child{border-right:none;}
+.cp-v{font-family:"Cinzel",serif;font-size:11px;color:var(--g3);display:block;font-weight:700;letter-spacing:1px;line-height:1.3;text-shadow:0 0 10px rgba(201,168,76,.3);}
+.cp-l{font-family:"Montserrat",sans-serif;font-size:6px;letter-spacing:3px;color:rgba(201,168,76,.28);display:block;margin-top:4px;text-transform:uppercase;}
+.c-stats{display:flex;gap:0;background:rgba(4,8,15,.7);backdrop-filter:blur(10px);border:1px solid rgba(201,168,76,.08);}
+.cs{padding:12px 18px;text-align:center;border-right:1px solid rgba(201,168,76,.06);}
+.cs:last-child{border-right:none;}
+.csv{font-family:"Cinzel",serif;font-size:18px;color:var(--red);display:block;font-weight:700;text-shadow:0 0 12px rgba(192,57,43,.3);line-height:1;}
+.csv.gold{color:var(--g3);text-shadow:0 0 12px rgba(201,168,76,.3);}
+.csl{font-family:"Montserrat",sans-serif;font-size:5.5px;letter-spacing:3px;color:rgba(201,168,76,.26);display:block;margin-top:3px;text-transform:uppercase;}
+.shint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font-family:"Montserrat",sans-serif;font-size:6px;letter-spacing:4px;color:rgba(201,168,76,.16);text-transform:uppercase;animation:bob 2.5s ease-in-out infinite;}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(6px);}}
+
+/* SECTIONS */
+.divider{border-top:1px solid var(--bdr);}
+.sec{padding:64px 48px;max-width:1140px;margin:0 auto;}
+.sec2{background:var(--n2);}
+.stag{font-family:"Montserrat",sans-serif;font-size:7px;letter-spacing:5px;color:rgba(201,168,76,.25);text-transform:uppercase;text-align:center;margin-bottom:12px;}
+.stitle{font-family:"Cinzel",serif;font-size:clamp(20px,3vw,32px);font-weight:700;color:var(--cr);text-align:center;letter-spacing:2px;margin-bottom:8px;}
+.stitle em{color:var(--g3);font-style:normal;}
+.ssub{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:16px;color:rgba(201,168,76,.38);text-align:center;margin-bottom:40px;}
+.shdr{display:flex;align-items:center;gap:16px;margin-bottom:38px;}
+.sn{font-family:"Cinzel",serif;font-size:10px;letter-spacing:4px;color:rgba(201,168,76,.2);flex-shrink:0;}
+.sr{flex:1;height:1px;background:rgba(201,168,76,.07);}
+.sl{font-family:"Cinzel",serif;font-size:10px;letter-spacing:5px;color:rgba(201,168,76,.26);text-transform:uppercase;white-space:nowrap;}
+
+/* WHY WE CHOSE */
+.why-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--bdr);}
+.wt{background:var(--n2);padding:28px 22px;text-align:center;}
+.wt.lit{background:rgba(201,168,76,.04);}
+.wtico{font-size:22px;display:block;margin-bottom:14px;}
+.wttit{font-family:"Cinzel",serif;font-size:10px;letter-spacing:3px;color:var(--g3);text-transform:uppercase;margin-bottom:8px;}
+.wtb{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:15px;color:var(--cr2);line-height:1.82;}
+.wtb strong{color:var(--cr);font-style:normal;}
+
+/* PROFILE */
+.cpg{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bdr);margin-bottom:22px;}
+.cpc{background:var(--bg);padding:17px 22px;}
+.cpcc{display:block;font-family:"Montserrat",sans-serif;font-size:6.5px;letter-spacing:3px;color:rgba(201,168,76,.27);text-transform:uppercase;margin-bottom:5px;}
+.cpcv{font-family:"Cormorant Garamond",serif;font-size:15.5px;color:var(--cr);}
+.cpcv strong{color:var(--g3);font-weight:500;}
+.kf{border-left:2px solid rgba(192,57,43,.45);padding:20px 24px;background:rgba(192,57,43,.04);}
+.kfl{font-family:"Montserrat",sans-serif;font-size:6.5px;letter-spacing:3px;color:rgba(192,57,43,.48);text-transform:uppercase;margin-bottom:8px;}
+.kfb{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:16px;color:var(--cr2);line-height:1.88;}
+.kfb strong{color:var(--cr);font-style:normal;}
+
+/* SCORES */
+.scrow{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bdr);margin-bottom:32px;}
+.sc{background:var(--bg);padding:26px 14px;text-align:center;}
+.scp{font-family:"Montserrat",sans-serif;font-size:6.5px;letter-spacing:3px;color:rgba(201,168,76,.3);text-transform:uppercase;margin-bottom:8px;}
+.scg{font-family:"Cinzel",serif;font-size:46px;font-weight:900;line-height:1;display:block;margin-bottom:5px;}
+.scg.r{color:var(--red);text-shadow:0 0 22px rgba(192,57,43,.36);}
+.scnote{font-family:"Montserrat",sans-serif;font-size:6px;letter-spacing:1.5px;color:rgba(201,168,76,.22);line-height:1.6;}
+.scar{font-size:14px;color:rgba(201,168,76,.2);display:block;margin:6px 0;}
+.scaf{font-family:"Cinzel",serif;font-size:19px;color:var(--g3);font-weight:700;text-shadow:0 0 10px rgba(201,168,76,.3);}
+.scal{font-family:"Montserrat",sans-serif;font-size:5.5px;letter-spacing:2px;color:rgba(39,174,96,.4);display:block;margin-top:3px;}
+
+/* AUDIT ROWS */
+.arow{padding:20px 0;border-bottom:1px solid rgba(201,168,76,.05);display:grid;grid-template-columns:160px 1fr auto;gap:16px;align-items:start;}
+.arow:last-child{border-bottom:none;}
+.arp{font-family:"Montserrat",sans-serif;font-size:8px;letter-spacing:2px;color:var(--g3);text-transform:uppercase;padding-top:2px;}
+.ars{font-family:"Montserrat",sans-serif;font-size:6px;letter-spacing:1.5px;color:rgba(201,168,76,.27);text-transform:uppercase;margin-top:3px;}
+.arb{font-family:"Cormorant Garamond",serif;font-size:15px;color:var(--cr2);line-height:1.7;}
+.arb strong{color:var(--cr);font-weight:400;}
+.arb em{color:rgba(192,57,43,.7);font-style:italic;}
+.atag{padding:4px 10px;font-family:"Montserrat",sans-serif;font-size:6px;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;flex-shrink:0;height:fit-content;}
+.tc{background:rgba(192,57,43,.1);border:1px solid rgba(192,57,43,.24);color:var(--red);}
+.tw{background:rgba(230,126,34,.08);border:1px solid rgba(230,126,34,.18);color:#e67e22;}
+.tz{background:rgba(192,57,43,.06);border:1px solid rgba(192,57,43,.13);color:rgba(192,57,43,.6);}
+
+/* MARKET TABLE */
+.mit{width:100%;border-collapse:collapse;}
+.mit th{font-family:"Montserrat",sans-serif;font-size:7px;letter-spacing:3px;color:rgba(201,168,76,.3);text-transform:uppercase;padding:10px 16px;text-align:left;border-bottom:1px solid var(--bdr);background:var(--n2);}
+.mit td{font-family:"Cormorant Garamond",serif;font-size:15px;color:var(--cr2);padding:13px 16px;border-bottom:1px solid rgba(201,168,76,.04);vertical-align:top;line-height:1.6;}
+.mit td strong{color:var(--cr);font-weight:400;}
+.td-r{color:var(--red)!important;}.td-g{color:var(--grn)!important;}
+
+/* OPPORTUNITY */
+.opg{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bdr);}
+.op{background:var(--n2);padding:26px 22px;}
+.op.lit{background:rgba(201,168,76,.04);}
+.oico{font-size:16px;display:block;margin-bottom:11px;}
+.otit{font-family:"Cinzel",serif;font-size:10px;letter-spacing:3px;color:var(--g3);text-transform:uppercase;margin-bottom:8px;}
+.obdy{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:15px;color:var(--cr2);line-height:1.8;}
+.obdy strong{color:var(--cr);font-style:normal;}
+
+/* 60 DAYS */
+.ngrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bdr);margin-bottom:18px;}
+.num{background:var(--n2);padding:22px 14px;text-align:center;}
+.nm{font-family:"Montserrat",sans-serif;font-size:6.5px;letter-spacing:3px;color:rgba(201,168,76,.27);text-transform:uppercase;margin-bottom:11px;}
+.nb{font-family:"Cinzel",serif;font-size:16px;color:var(--red);display:block;}
+.na{font-family:"Cinzel",serif;font-size:21px;font-weight:700;color:var(--g3);display:block;text-shadow:0 0 10px rgba(201,168,76,.3);}
+.nar{font-size:12px;color:rgba(201,168,76,.18);display:block;margin:4px 0;}
+.nl{font-family:"Montserrat",sans-serif;font-size:5.5px;letter-spacing:2px;color:rgba(201,168,76,.24);margin-top:4px;text-transform:uppercase;}
+
+/* BOTTOM LINE */
+.bl{border-left:2px solid rgba(39,174,96,.4);padding:20px 24px;background:rgba(39,174,96,.03);}
+.bll{font-family:"Montserrat",sans-serif;font-size:6.5px;letter-spacing:3px;color:rgba(39,174,96,.48);text-transform:uppercase;margin-bottom:8px;}
+.blb{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:16px;color:var(--cr2);line-height:1.88;}
+.blb strong{color:var(--cr);font-style:normal;}
+
+/* CLOSE */
+.close{padding:80px 40px;text-align:center;background:var(--n2);position:relative;overflow:hidden;}
+.close::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.06) 0%,transparent 55%);pointer-events:none;}
+.cc{position:relative;z-index:1;max-width:600px;margin:0 auto;}
+.clh{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:300;font-size:clamp(24px,4.5vw,46px);color:var(--cr);line-height:1.45;margin:20px 0 12px;}
+.clh em{color:var(--g2);}
+.clr{width:56px;height:1px;background:rgba(201,168,76,.16);margin:24px auto;}
+.cln{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:14px;color:rgba(201,168,76,.35);letter-spacing:2px;}
+.cconv{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:12px;color:rgba(201,168,76,.2);margin-top:7px;}
+.abx{display:flex;gap:0;justify-content:center;margin:24px 0;flex-wrap:wrap;}
+.ab{background:var(--n3);padding:16px 26px;text-align:center;border:1px solid var(--bdr);}
+.ab.lit{background:rgba(201,168,76,.05);border-color:rgba(201,168,76,.15);}
+.abv{font-family:"Cinzel",serif;font-size:15px;color:var(--g3);font-weight:700;}
+.abl{font-family:"Montserrat",sans-serif;font-size:5.5px;letter-spacing:3px;color:rgba(201,168,76,.24);margin-top:3px;text-transform:uppercase;}
+
+@media(max-width:860px){
+  .nav{padding:0 16px;}.sec{padding:50px 18px;}
+  .why-grid,.opg{grid-template-columns:1fr;}
+  .cpg,.scrow,.ngrid{grid-template-columns:1fr 1fr;}
+  .c-philosophy,.c-stats{flex-wrap:wrap;}
+  .cp,.cs{min-width:25%;}
+  .arow{grid-template-columns:1fr;gap:8px;}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<nav class="nav">
+  <div class="nav-logo">
+    <svg viewBox="0 0 100 132" width="19" height="25" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;flex-shrink:0;">
+      <defs><linearGradient id="gN" x1="0" y1="1" x2="0" y2="0" gradientUnits="objectBoundingBox"><stop offset="0%" stop-color="#4a3010" stop-opacity=".5"/><stop offset="30%" stop-color="#c9a84c"/><stop offset="70%" stop-color="#e8d080"/><stop offset="100%" stop-color="#f8eebc"/></linearGradient><filter id="fN"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+      <path d="M 9,115 Q 50,122 91,115" stroke="url(#gN)" stroke-width="1" fill="none" opacity=".4"/>
+      <path d="M 14,112 C 12,82 22,52 50,12" stroke="url(#gN)" stroke-width="2.5" fill="none" stroke-linecap="round" filter="url(#fN)"/>
+      <path d="M 50,118 C 46,88 52,58 50,12" stroke="url(#gN)" stroke-width="2.5" fill="none" stroke-linecap="round" filter="url(#fN)"/>
+      <path d="M 86,112 C 88,82 78,52 50,12" stroke="url(#gN)" stroke-width="2.5" fill="none" stroke-linecap="round" filter="url(#fN)"/>
+      <circle cx="14" cy="112" r="2.5" fill="#c9a84c"/><circle cx="50" cy="118" r="2.5" fill="#c9a84c"/><circle cx="86" cy="112" r="2.5" fill="#c9a84c"/>
+      <circle cx="50" cy="12" r="5" fill="#f8eebc" filter="url(#fN)"/><circle cx="50" cy="12" r="2" fill="#fff"/>
+    </svg>
+    <span class="nav-wm">Anubhav <b>Flow</b></span>
+  </div>
+  <div class="nav-r">
+    <div class="tag tr"><div class="ld"></div>AI Intelligence</div>
+    <div class="tag tg">Market Analysis</div>
+    <div class="tag tg" style="color:rgba(201,168,76,.28);border-color:rgba(201,168,76,.08);">Confidential</div>
+  </div>
+</nav>
+
+<div class="cover">
+  <div class="cover-grid"></div>
+  <canvas id="cc"></canvas>
+  <div class="con">
+    <div class="c-eye" style="opacity:0;animation:fu .7s forwards .2s;"><div class="cl"></div>Anubhav Flow Intelligence Division<div class="cl"></div></div>
+    <div class="c-conf" style="opacity:0;animation:fu .7s forwards .5s;">Global Market Analysis &middot; AI Intelligence Report &middot; June 2026</div>
+    <div class="c-subj" style="opacity:0;animation:fu .7s forwards .7s;">Subject Company: <span>SaniXperts Inc.</span></div>
+    <div class="c-hero" style="opacity:0;animation:fu .9s forwards 1s;"><em>This Is Why<br>We Chose.</em></div>
+    <div class="c-tag" style="opacity:0;animation:fu .8s forwards 1.6s;">This is the reason. This is what we found. This is what we can change.</div>
+    <div class="c-rule" style="opacity:0;animation:fu .7s forwards 1.9s;"></div>
+    <div class="c-philosophy" style="opacity:0;animation:fu .8s forwards 2.1s;">
+      <div class="cp"><span class="cp-v">The Reason</span><span class="cp-l">Why We Choose</span></div>
+      <div class="cp"><span class="cp-v">The Truth</span><span class="cp-l">What We Found</span></div>
+      <div class="cp"><span class="cp-v">The Gap</span><span class="cp-l">What Is Missing</span></div>
+      <div class="cp"><span class="cp-v">The Change</span><span class="cp-l">What We Will Do</span></div>
+    </div>
+    <div class="c-stats" style="opacity:0;animation:fu .8s forwards 2.4s;">
+      <div class="cs"><span class="csv">F</span><span class="csl">Website Score</span></div>
+      <div class="cs"><span class="csv">D&minus;</span><span class="csl">Social Score</span></div>
+      <div class="cs"><span class="csv">0</span><span class="csl">Content Output</span></div>
+      <div class="cs"><span class="csv gold">15yr</span><span class="csl">Market Tenure</span></div>
+      <div class="cs"><span class="csv gold">$2.1M</span><span class="csl">Revenue</span></div>
+      <div class="cs"><span class="csv gold">&infin;</span><span class="csl">Opportunity</span></div>
+    </div>
+  </div>
+  <div class="shint">&darr; scroll</div>
+</div>
+<div class="divider"></div>
+
+<!-- 01 WHY WE CHOSE -->
+<div class="sec2 divider"><div class="sec f">
+  <div class="shdr"><span class="sn">01</span><div class="sr"></div><span class="sl">The Reason We Choose &mdash; Why SaniXperts</span><div class="sr" style="max-width:36px;"></div></div>
+  <div class="why-grid">
+    <div class="wt"><span class="wtico">&diams;</span><div class="wttit">The Credentials</div><div class="wtb"><strong>Ferrero. Mondelez. Federal food plants.</strong> These clients do not choose average vendors. SaniXperts has served the most scrutinized brands in food manufacturing for 15 years. That is not a small company. That is a sleeping giant.</div></div>
+    <div class="wt lit"><span class="wtico">&CircleDot;</span><div class="wttit">The Silence</div><div class="wtb">15 years of work. 52 staff. $2.1M in revenue. And the internet has <strong>no idea they exist.</strong> That is not a flaw in SaniXperts. That is a gap the size of a building. And Anubhav Flow is the machine built to fill it.</div></div>
+    <div class="wt"><span class="wtico">&diams;</span><div class="wttit">The Moment</div><div class="wtb">The sanitation niche on LinkedIn is <strong>almost empty.</strong> The algorithm rewards those who start now. The regulatory environment is driving buyers to search for certified partners. The window is open &mdash; and we see it.</div></div>
+  </div>
+</div></div>
+
+<!-- 02 COMPANY PROFILE -->
+<div class="divider"><div class="sec f">
+  <div class="shdr"><span class="sn">02</span><div class="sr"></div><span class="sl">Subject Company Profile</span><div class="sr" style="max-width:36px;"></div></div>
+  <div class="cpg">
+    <div class="cpc"><span class="cpcc">Company</span><div class="cpcv"><strong>SaniXperts Inc.</strong></div></div>
+    <div class="cpc"><span class="cpcc">Location</span><div class="cpcv">Hamilton, Ontario, Canada &middot; L9B 1K4</div></div>
+    <div class="cpc"><span class="cpcc">Founded</span><div class="cpcv"><strong>~2009</strong> &middot; 15+ years operating</div></div>
+    <div class="cpc"><span class="cpcc">President</span><div class="cpcv"><strong>Haron Toma</strong> &middot; 449+ LinkedIn connections</div></div>
+    <div class="cpc"><span class="cpcc">Employees</span><div class="cpcv"><strong>52 staff</strong> (51&ndash;200 range, verified)</div></div>
+    <div class="cpc"><span class="cpcc">Est. Revenue</span><div class="cpcv"><strong>~$2.1M CAD</strong> annual</div></div>
+    <div class="cpc"><span class="cpcc">Key Clients</span><div class="cpcv"><strong>Ferrero &checkmark; &nbsp;Mondelez &checkmark;</strong> &middot; Federal food plants &middot; Provincial</div></div>
+    <div class="cpc"><span class="cpcc">Specialization</span><div class="cpcv">Federal &amp; provincial food plants &middot; Poultry, red meat, dairy, RTE, slaughter, vertical farming</div></div>
+    <div class="cpc"><span class="cpcc">Certifications</span><div class="cpcv">HACCP &middot; BRC &middot; USDA FSA &middot; Health Canada approved disinfectants</div></div>
+    <div class="cpc"><span class="cpcc">Technology</span><div class="cpcv">UV &amp; Ozone disinfection &middot; Nine-step sanitation procedure</div></div>
+    <div class="cpc" style="grid-column:1/-1;"><span class="cpcc">Growth Model</span><div class="cpcv"><strong>100% referral-based.</strong> Zero outbound marketing. Zero digital lead generation. Zero online presence.</div></div>
+  </div>
+  <div class="kf"><div class="kfl">Key Intelligence Finding</div><div class="kfb">SaniXperts has served <strong>Ferrero and Mondelez</strong> &mdash; two of the world&rsquo;s most scrutinized food brands. These clients do not choose average vendors. The quality of SaniXperts&rsquo; work is proven at the highest level. And yet <strong>the internet has no idea they exist.</strong> That is a market gap the size of a building &mdash; and Anubhav Flow is the machine built to fill it.</div></div>
+</div></div>
+
+<!-- 03 AUDIT -->
+<div class="divider sec2"><div class="sec f">
+  <div class="shdr"><span class="sn">03</span><div class="sr"></div><span class="sl">Digital Presence Audit &mdash; What We Found</span><div class="sr" style="max-width:36px;"></div></div>
+  <div class="scrow">
+    <div class="sc"><div class="scp">Website</div><span class="scg r">F</span><div class="scnote">JS-gated &middot; Google invisible<br>Last indexed 2022</div><span class="scar">&darr;</span><span class="scaf">A+</span><span class="scal">After Anubhav Flow</span></div>
+    <div class="sc"><div class="scp">LinkedIn Company</div><span class="scg r">D&minus;</span><div class="scnote">Minimal followers &middot; No strategy<br>Near-zero distribution</div><span class="scar">&darr;</span><span class="scaf">1,400+</span><span class="scal">Followers in 60 days</span></div>
+    <div class="sc"><div class="scp">Instagram / TikTok</div><span class="scg r">0</span><div class="scnote">No presence found<br>Zero accounts detected</div><span class="scar">&darr;</span><span class="scaf">7+</span><span class="scal">Platforms activated</span></div>
+    <div class="sc"><div class="scp">Content Output</div><span class="scg r">0</span><div class="scnote">Zero active content<br>Zero organic reach</div><span class="scar">&darr;</span><span class="scaf">240+</span><span class="scal">Pieces in 60 days</span></div>
+  </div>
+  <div>
+    <div class="arow"><div><div class="arp">Website</div><div class="ars">sanixperts.ca</div></div><div class="arb"><strong>JavaScript-gated</strong> &mdash; crawlers cannot read it. Last indexed <strong>2022</strong>. No blog, no case studies, no call-to-action. <em>Ferrero and Mondelez as clients. Zero proof online.</em></div><div class="atag tc">Critical Gap</div></div>
+    <div class="arow"><div><div class="arp">LinkedIn</div><div class="ars">Company Page</div></div><div class="arb">No measurable follower base. Same boilerplate copy-pasted across <strong>Alignable, Manta, NextDoor, Clodura</strong>. LinkedIn organic reach dropped <strong>60&ndash;66% since 2024</strong>. Near-zero distribution without content strategy.</div><div class="atag tc">Critical Gap</div></div>
+    <div class="arow"><div><div class="arp">LinkedIn</div><div class="ars">Haron Toma &mdash; Personal</div></div><div class="arb">Guest speaker at Centennial College, Food &amp; Beverage Ontario 2025 attendee, leads student programs. <strong>Exceptionally valuable content not being leveraged.</strong> Personal profiles generate <strong>5&times; more engagement</strong>. His 449 connections &mdash; a warm untouched audience.</div><div class="atag tw">Untapped Asset</div></div>
+    <div class="arow"><div><div class="arp">Social &amp; Visual</div><div class="ars">Instagram &middot; TikTok &middot; YouTube</div></div><div class="arb"><strong>No presence on any visual platform.</strong> Competitor Fayette Industrial has 1,626 LinkedIn followers. Sani Marc (50+ years) has full digital infrastructure. <em>SaniXperts is competing in a market it is invisible in.</em></div><div class="atag tz">Zero Presence</div></div>
+  </div>
+</div></div>
+
+<!-- 04 MARKET -->
+<div class="divider"><div class="sec f">
+  <div class="shdr"><span class="sn">04</span><div class="sr"></div><span class="sl">Global Market Intelligence &mdash; The Landscape</span><div class="sr" style="max-width:36px;"></div></div>
+  <table class="mit">
+    <thead><tr><th>Signal</th><th>Market Data</th><th>Impact on SaniXperts</th></tr></thead>
+    <tbody>
+      <tr><td><strong>LinkedIn Algorithm 2024&ndash;26</strong></td><td>Company reach dropped <strong class="td-r">60&ndash;66%</strong>. Personal profiles get <strong class="td-g">5&times; more engagement</strong>.</td><td>Haron Toma&rsquo;s personal presence is the highest-ROI content channel available right now.</td></tr>
+      <tr><td><strong>Document / Carousel Posts</strong></td><td>Native documents generate <strong class="td-g">2&ndash;3&times; more impressions</strong> than any other LinkedIn format, Q1 2026.</td><td>SaniXperts&rsquo; nine-step process, HACCP, facility expertise = perfect carousel content.</td></tr>
+      <tr><td><strong>Video Content</strong></td><td>Video receives <strong class="td-g">3&times; more engagement</strong>. LinkedIn video frequency doubled in 2025 among active brands.</td><td>Industrial facility tours, disinfection documentation, team culture videos &mdash; completely untapped.</td></tr>
+      <tr><td><strong>Canadian B2B Sanitation</strong></td><td>Sani Marc (50+ years) dominates nationally. Total Sanitation (PE-backed) expanding to US. Fayette has 1,626 followers.</td><td>Ontario premium segment is open. Ferrero + Mondelez credentials beat every regional competitor.</td></tr>
+      <tr><td><strong>Food Safety Regulatory Climate</strong></td><td>HACCP, BRC, USDA FSA audits increasing across Ontario post-2024. Buyers actively seeking certified partners.</td><td>SaniXperts meets all certifications &mdash; a selling point not being communicated to the market searching for it.</td></tr>
+      <tr><td><strong>AI Content in B2B Marketing</strong></td><td>AI pipelines produce <strong class="td-g">8&ndash;15&times; more output</strong> than human teams on equivalent budgets.</td><td>Anubhav Flow&rsquo;s 8 agents produce daily content at zero marginal cost per piece &mdash; indefinitely.</td></tr>
+    </tbody>
+  </table>
+</div></div>
+
+<!-- 05 OPPORTUNITY -->
+<div class="divider sec2"><div class="sec f">
+  <div class="shdr"><span class="sn">05</span><div class="sr"></div><span class="sl">The Opportunity &mdash; What We See</span><div class="sr" style="max-width:36px;"></div></div>
+  <div class="opg">
+    <div class="op lit"><span class="oico">&diams;</span><div class="otit">The Credential Arbitrage</div><div class="obdy">SaniXperts carries <strong>Ferrero and Mondelez</strong> &mdash; globally recognized quality signals no Ontario competitor can claim. These credentials, properly communicated digitally, would close B2B deals before the first phone call. They are currently sitting in silence.</div></div>
+    <div class="op"><span class="oico">&diams;</span><div class="otit">The Haron Toma Personal Brand</div><div class="obdy">Haron speaks at colleges, attends national conferences, leads student programs. He is <strong>already doing the work of a thought leader</strong> &mdash; without the audience. His LinkedIn, properly activated, outperforms any company page by 5&times;. The content exists. It isn&rsquo;t reaching anyone.</div></div>
+    <div class="op"><span class="oico">&diams;</span><div class="otit">The Visual Content Gap</div><div class="obdy">Industrial sanitation is <strong>a visually compelling industry nobody is filming</strong>. Before-and-after transformations, nine-step breakdowns, team culture. Zero Ontario competitors doing this well. The first one to own it owns the category.</div></div>
+    <div class="op lit"><span class="oico">&diams;</span><div class="otit">The Algorithm Timing</div><div class="obdy">LinkedIn 2026 rewards companies starting now with consistent native content. <strong>The sanitation niche on LinkedIn is almost empty.</strong> Establishing SaniXperts as the authoritative voice takes 60&ndash;90 days &mdash; which Anubhav Flow can sustain indefinitely.</div></div>
+  </div>
+</div></div>
+
+<!-- 06 60 DAYS -->
+<div class="divider"><div class="sec f">
+  <div class="stag">What We Can Change</div>
+  <div class="stitle">60 Days. <em>Before &rarr; After.</em></div>
+  <div class="ssub">Conservative projections based on live 2026 market data. Starting numbers &mdash; not ceilings.</div>
+  <div class="ngrid">
+    <div class="num"><div class="nm">LinkedIn Followers</div><span class="nb">&lt;50</span><span class="nar">&darr;</span><span class="na">900&ndash;1,400</span><span class="nl">Day 60</span></div>
+    <div class="num"><div class="nm">Post Reach Per Post</div><span class="nb">~100</span><span class="nar">&darr;</span><span class="na">5,000+</span><span class="nl">Impressions</span></div>
+    <div class="num"><div class="nm">Personal Reach (Haron)</div><span class="nb">449 connections</span><span class="nar">&darr;</span><span class="na">20,000+</span><span class="nl">Per Post</span></div>
+    <div class="num"><div class="nm">Content Published</div><span class="nb">0</span><span class="nar">&darr;</span><span class="na">240+</span><span class="nl">Pieces</span></div>
+    <div class="num"><div class="nm">Google Impressions</div><span class="nb">~0</span><span class="nar">&darr;</span><span class="na">4,000+</span><span class="nl">Monthly</span></div>
+    <div class="num"><div class="nm">Digital Inquiries</div><span class="nb">0 / month</span><span class="nar">&darr;</span><span class="na">8&ndash;20</span><span class="nl">Inbound</span></div>
+  </div>
+  <div class="bl"><div class="bll">Bottom Line</div><div class="blb">These numbers are based on real LinkedIn algorithm data, real Ontario B2B content benchmarks, and real pattern analysis. They are <strong>conservative.</strong> A company with Ferrero and Mondelez as proof points &mdash; once that proof is made visible &mdash; will convert at a rate higher than any generic industrial services brand. The credentials already exist. <strong>Anubhav Flow makes them seen.</strong></div></div>
+</div></div>
+
+<!-- CLOSE -->
+<div class="divider">
+<div class="close"><div class="cc f">
+  <div style="font-family:'Montserrat',sans-serif;font-size:7px;letter-spacing:5px;color:rgba(201,168,76,.22);text-transform:uppercase;margin-bottom:20px;">Anubhav Flow &middot; AI Intelligence Report &middot; June 2026</div>
+  <svg viewBox="0 0 100 132" width="50" height="66" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;display:block;margin:0 auto 16px;">
+    <defs><linearGradient id="gCL" x1="0" y1="1" x2="0" y2="0" gradientUnits="objectBoundingBox"><stop offset="0%" stop-color="#4a3010" stop-opacity=".5"/><stop offset="30%" stop-color="#c9a84c"/><stop offset="70%" stop-color="#e8d080"/><stop offset="100%" stop-color="#f8eebc"/></linearGradient><radialGradient id="gCLA" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#fff" stop-opacity=".95"/><stop offset="100%" stop-color="#c9a84c" stop-opacity=".4"/></radialGradient><filter id="fCL"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="fCLA"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+    <path d="M 9,115 Q 50,122 91,115" stroke="url(#gCL)" stroke-width="1" fill="none" opacity=".4"/>
+    <path d="M 14,112 C 12,82 22,52 50,12" stroke="rgba(201,168,76,.15)" stroke-width="8" fill="none" stroke-linecap="round" filter="url(#fCL)"/><path d="M 14,112 C 12,82 22,52 50,12" stroke="url(#gCL)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 50,118 C 46,88 52,58 50,12" stroke="rgba(201,168,76,.15)" stroke-width="8" fill="none" stroke-linecap="round" filter="url(#fCL)"/><path d="M 50,118 C 46,88 52,58 50,12" stroke="url(#gCL)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 86,112 C 88,82 78,52 50,12" stroke="rgba(201,168,76,.15)" stroke-width="8" fill="none" stroke-linecap="round" filter="url(#fCL)"/><path d="M 86,112 C 88,82 78,52 50,12" stroke="url(#gCL)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <circle cx="14" cy="112" r="3" fill="url(#gCLA)" filter="url(#fCL)"/><circle cx="50" cy="118" r="3" fill="url(#gCLA)" filter="url(#fCL)"/><circle cx="86" cy="112" r="3" fill="url(#gCLA)" filter="url(#fCL)"/>
+    <circle cx="19" cy="62" r="1.8" fill="#c9a84c" opacity=".7"><animate attributeName="r" values="1.8;3.5;1.8" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="49" cy="65" r="1.8" fill="#c9a84c" opacity=".7"><animate attributeName="r" values="1.8;3.5;1.8" dur="3.4s" repeatCount="indefinite"/></circle>
+    <circle cx="81" cy="62" r="1.8" fill="#c9a84c" opacity=".7"><animate attributeName="r" values="1.8;3.5;1.8" dur="2.8s" repeatCount="indefinite"/></circle>
+    <circle cx="50" cy="12" r="22" fill="rgba(201,168,76,.05)" filter="url(#fCLA)"><animate attributeName="r" values="18;26;18" dur="3s" repeatCount="indefinite"/></circle>
+    <line x1="50" y1="2" x2="50" y2="22" stroke="rgba(248,238,188,.18)" stroke-width=".7"/><line x1="40" y1="12" x2="60" y2="12" stroke="rgba(248,238,188,.18)" stroke-width=".7"/>
+    <circle cx="50" cy="12" r="8" fill="url(#gCLA)" filter="url(#fCLA)"><animate attributeName="r" values="8;10;8" dur="2.5s" repeatCount="indefinite"/></circle>
+    <circle cx="50" cy="12" r="3.5" fill="#fff" opacity=".95"/>
+  </svg>
+  <div class="clh">We found the giant.<br><em>Now we make it roar.</em></div>
+  <div class="abx">
+    <div class="ab"><div class="abv">The Reason.</div><div class="abl">Why We Chose</div></div>
+    <div class="ab"><div class="abv">The Truth.</div><div class="abl">What We Found</div></div>
+    <div class="ab"><div class="abv">The Gap.</div><div class="abl">What Is Missing</div></div>
+    <div class="ab lit"><div class="abv" style="color:var(--g2);">The Change.</div><div class="abl">What We Will Do</div></div>
+  </div>
+  <div class="clr"></div>
+  <div class="cln">Adarsh &middot; Delna Cyriac &middot; Anubhav Flow Systems</div>
+  <div class="cconv">&ldquo;We study. We find. We change. The results speak.&rdquo;</div>
+</div></div>
+</div>
+
+<script>
+window.addEventListener("scroll",function(){document.getElementById("prog").style.width=(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)+"%";});
+document.querySelectorAll(".f").forEach(function(el){new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add("on");});},{threshold:.07}).observe(el);});
+(function(){
+  var c=document.getElementById("cc"),ctx=c.getContext("2d"),w,h,cx,cy,t=0;
+  function rs(){w=c.width=c.offsetWidth;h=c.height=c.offsetHeight;cx=w/2;cy=h/2;}rs();new ResizeObserver(rs).observe(c.parentElement);
+  var R=[{r:.22,sp:.003,tilt:.35,n:12,sz:1.8,a:.4},{r:.32,sp:-.002,tilt:.9,n:18,sz:1.4,a:.3},{r:.44,sp:.0015,tilt:1.4,n:26,sz:1.1,a:.2},{r:.58,sp:-.001,tilt:.6,n:34,sz:.85,a:.12},{r:.72,sp:.0008,tilt:1.7,n:44,sz:.65,a:.07}];
+  var S=[];for(var i=0;i<18;i++)S.push({a:Math.random()*Math.PI*2,r:600*(.45+Math.random()*.25),sp:.7+Math.random()*1.1,al:.03+Math.random()*.1,sz:.7+Math.random()*1.1});
+  function G(a){return"rgba(201,168,76,"+a+")";}function G2(a){return"rgba(248,238,188,"+a+")";}
+  function draw(){
+    var MR=Math.min(w,h)*.5;ctx.clearRect(0,0,w,h);
+    var bg=ctx.createRadialGradient(cx,cy,0,cx,cy,MR);bg.addColorStop(0,"rgba(11,24,40,.15)");bg.addColorStop(1,"rgba(4,8,15,0)");ctx.fillStyle=bg;ctx.fillRect(0,0,w,h);
+    S.forEach(function(ds,i){ds.r-=ds.sp;if(ds.r<MR*.07){S[i]={a:Math.random()*Math.PI*2,r:MR*(.44+Math.random()*.28),sp:.7+Math.random()*1.1,al:.03+Math.random()*.1,sz:.7+Math.random()*1.1};return;}
+      var x=cx+Math.cos(ds.a)*ds.r,y=cy+Math.sin(ds.a)*ds.r,tail=9+ds.sz*3,x2=cx+Math.cos(ds.a)*(ds.r+tail),y2=cy+Math.sin(ds.a)*(ds.r+tail);
+      var gr=ctx.createLinearGradient(x2,y2,x,y);gr.addColorStop(0,G(0));gr.addColorStop(1,G(ds.al));ctx.beginPath();ctx.moveTo(x2,y2);ctx.lineTo(x,y);ctx.strokeStyle=gr;ctx.lineWidth=ds.sz*.5;ctx.stroke();});
+    var np=[];
+    R.forEach(function(ring,ri){
+      var rad=Math.min(w,h)*ring.r;ctx.save();ctx.translate(cx,cy);ctx.scale(1,Math.cos(ring.tilt));ctx.beginPath();ctx.ellipse(0,0,rad,rad,0,0,Math.PI*2);ctx.strokeStyle=G(.04);ctx.lineWidth=.6;ctx.stroke();ctx.restore();
+      for(var j=0;j<ring.n;j++){var ang=(j/ring.n)*Math.PI*2+ring.sp*t,x=cx+Math.cos(ang)*rad,y=cy+Math.sin(ang)*rad*Math.cos(ring.tilt),pulse=Math.sin(t*.04+j*.5)*.5+.5,sz=ring.sz*(.6+pulse*.6),al=ring.a*(.4+pulse*.5);
+        np.push({x,y,ring:ri});ctx.beginPath();ctx.arc(x,y,sz,0,Math.PI*2);ctx.fillStyle=ri<2?G2(al):G(al);ctx.fill();}});
+    for(var ii=0;ii<np.length;ii++)for(var jj=ii+1;jj<np.length;jj++){var aa=np[ii],bb=np[jj];if(Math.abs(aa.ring-bb.ring)>1)continue;var dx=aa.x-bb.x,dy=aa.y-bb.y,d=Math.sqrt(dx*dx+dy*dy),mD=Math.min(w,h)*.07;if(d<mD){ctx.beginPath();ctx.moveTo(aa.x,aa.y);ctx.lineTo(bb.x,bb.y);ctx.strokeStyle=G((1-d/mD)*.06);ctx.lineWidth=.4;ctx.stroke();}}
+    var bp=Math.sin(t*.6)*.1+.9,cR=Math.min(w,h)*.04*bp;
+    var cg=ctx.createRadialGradient(cx,cy,0,cx,cy,cR*5);cg.addColorStop(0,G(.13));cg.addColorStop(1,G(0));ctx.fillStyle=cg;ctx.beginPath();ctx.arc(cx,cy,cR*5,0,Math.PI*2);ctx.fill();
+    t++;requestAnimationFrame(draw);}draw();
+})();
+</script>
+</body>
+</html>
